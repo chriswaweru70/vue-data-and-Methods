@@ -25,6 +25,9 @@
             <button v-on:mouseover="add(10)">Add 0ne to age</button>
             <button v-on:mouseover="subtract(10)">Subtract one to age</button>
             <p>My age is {{ age }}</p>
+            <div id="canvas" v-on:mousemove="updateXY">
+                {{x}}, {{y}}
+            </div>
         </div>
         <script src="app.js"></script>
     </body>

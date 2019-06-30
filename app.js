@@ -6,7 +6,9 @@ new Vue({
         website: "https://www.youtube.com/watch?v=xIOwFTCBBDg&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=5",
         websiteTag: '<a href="https://www.youtube.com/watch?v=xIOwFTCBBDg&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=5">THe Net ninja</a>',
         rawhtml: '<span style="color:purple"></span>',
-        age: 22
+        age: 22,
+        x: 0,
+        y: 0
     },
     methods: {
         greeting: function (event) {
@@ -20,6 +22,10 @@ new Vue({
         },
         subtract: function (dec) {
             this.age -= dec;  // this.age+= 12
+        },
+        updateXY: function (event) {
+            this.x = event.offsetX
+            this.y = event.offsetY
         }
     }
 });
