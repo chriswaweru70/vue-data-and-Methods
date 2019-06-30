@@ -15,8 +15,11 @@ new Vue({
         greetUser: function (event) {
             alert('Hey Mr' + ' ' + this.name)
         },
-        if(event) {
-            alert(event.target.tagName)
+        add: function () {
+            this.age++; // this.age+= 10
+        },
+        subtract: function () {
+            this.age--;  // this.age+= 12
         }
     }
 });
