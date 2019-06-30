@@ -11,6 +11,9 @@
     </head>
     <body>
         <div id="vue-app">
+            <a v-bind:href="website">The Net Ninja youtube video</a>
+            <input type="text" :value="name" :placeholder="job">
+            <p v-html="websiteTag"></p>
             <h1>{{ greeting('afternoon') }}</h1>
             <p> Name: {{ name }}</p>
             <p>Occupation: {{ job }}</p>
