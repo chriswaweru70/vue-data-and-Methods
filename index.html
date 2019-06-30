@@ -18,16 +18,24 @@
             <p> Name: {{ name }}</p>
             <p>Occupation: {{ job }}</p>
             <button v-on:click="greetUser">Click Me</button>
-            <button v-on:click="add(1)">Add 0ne to age</button>
+            <button v-on:click.once="add(1)">Add 0ne to age</button>
             <button v-on:click="subtract(1)">Subtract one to age</button>
             <button v-on:dblclick="add(5)">Add 0ne to age</button>
             <button v-on:dblclick="subtract(5)">Subtract one to age</button>
             <button v-on:mouseover="add(10)">Add 0ne to age</button>
             <button v-on:mouseover="subtract(10)">Subtract one to age</button>
+            <a v-on:click.prevent="click"
+                href="https://vuejs.org/v2/guide/events.html?#Event-Modifiers">Vue.js</a>
             <p>My age is {{ age }}</p>
+            <h1>Keyboard Events</h1>
+            <labeL>Name:</labeL>
+            <input type="text" v-on:keyup.enter="logName">
+            <label>Age</label>
+            <input type="text" v-on:keyup.tab.up="logAge">
             <div id="canvas" v-on:mousemove="updateXY">
                 {{x}}, {{y}}
             </div>
+
         </div>
         <script src="app.js"></script>
     </body>

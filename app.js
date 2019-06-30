@@ -24,8 +24,17 @@ new Vue({
             this.age -= dec;  // this.age+= 12
         },
         updateXY: function (event) {
-            this.x = event.offsetX
-            this.y = event.offsetY
+            this.x = event.offsetX;
+            this.y = event.offsetY;
+        },
+        click: function () {
+            alert('This will take you to the vue.js docs');
+        },
+        logName: function () {
+            console.log('You Entered your name')
+        },
+        logAge: function () {
+            console.log('You Entered your age')
         }
     }
 });
