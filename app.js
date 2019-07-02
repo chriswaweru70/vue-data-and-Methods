@@ -17,7 +17,15 @@ new Vue({
             available: false,
             nearby: false,
             error: false,
-            success: false
+            success: false,
+            families: ["Peter", "Jane", "Chris", "Frank", "Vivian"],
+            ninjas: [
+                { name: "Peter", age: "51" },
+                { name: "Jane", age: "49" },
+                { name: "Chris", age: "23" },
+                { name: "Frank", age: "18" },
+                { name: "Vivian", age: "13" }
+            ]
         }
     },
     methods: {

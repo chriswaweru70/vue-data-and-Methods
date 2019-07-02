@@ -21,7 +21,7 @@
             <p> {{ reversedName }}</p>
             <p> {{ fullName}} </p>
             <h1 class="">Dynamic CSS</h1>
-            <!-- <h2>Example 1</h2>
+            <!-- <h2>Example 1</h2> 
             <div v-on:click="available= !available" v-bind:class="{available:
                 available}">
                 <span>Ryu</span>
@@ -39,6 +39,21 @@
             <p v-else-if="success">Huurray you have successfully joined us</p> -->
             <p v-show="error"> There has been an error we are sorry</p>
             <p v-show="success">Huurray you have successfully joined us</p>
+
+            <ul>
+                <li v-for="(family, index) in families"> {{ index }} .{{ family
+                    }}</li>
+            </ul>
+            <ul>
+                <li v-for="(ninja, index) in ninjas">{{ index }}.{{ ninja.name
+                    }}
+                    - {{ ninja.age}}</li>
+            </ul>
+            <template v-for="ninja in ninjas">
+                <div v-for="(val, key) in ninja">
+                    <p>{{ key }}- {{ val }}</p>
+                </div>
+            </template>
         </div>
 
         <script src="app.js"></script>
