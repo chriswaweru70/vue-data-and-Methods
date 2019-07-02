@@ -1,14 +1,24 @@
 new Vue({
     el: "#vue-app",
-    data: {
-        name: 'Chris',
-        job: 'Software Developer',
-        website: "https://www.youtube.com/watch?v=xIOwFTCBBDg&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=5",
-        websiteTag: '<a href="https://www.youtube.com/watch?v=xIOwFTCBBDg&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=5">THe Net ninja</a>',
-        rawhtml: '<span style="color:purple"></span>',
-        age: 22,
-        x: 0,
-        y: 0
+    data() {
+        return {
+            name: 'Chris',
+            job: 'Software Developer',
+            website: "https://www.youtube.com/watch?v=xIOwFTCBBDg&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=5",
+            websiteTag: '<a href="https://www.youtube.com/watch?v=xIOwFTCBBDg&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=5">THe Net ninja</a>',
+            rawhtml: '<span style="color:purple"></span>',
+            age: 20,
+            x: 0,
+            y: 0,
+            a: 0,
+            b: 0,
+            firstName: 'Waweru',
+            surname: 'Kamau',
+            available: false,
+            nearby: false,
+            error: false,
+            success: false
+        }
     },
     methods: {
         greeting: function (event) {
@@ -35,6 +45,29 @@ new Vue({
         },
         logAge: function () {
             console.log('You Entered your age')
+        },
+    },
+    computed: {
+        addToA: function () {
+            console.log('addToA')
+            return this.a + this.age;
+        },
+        addToB: function () {
+            console.log('addToB')
+            return this.b + this.age;
+        },
+        reversedName: function () {
+            // console.log(vm.reversedName)
+            return this.name.split('').reverse().join('')
+        },
+        fullName: function () {
+            return `${this.firstName} ${this.surname}`
+        },
+        compClasses: function () {
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
         }
     }
 });
