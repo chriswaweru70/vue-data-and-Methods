@@ -2,6 +2,8 @@ new Vue({
     el: "#vue-app",
     data() {
         return {
+            health: 100,
+            ended: false,
             name: 'Chris',
             job: 'Software Developer',
             website: "https://www.youtube.com/watch?v=xIOwFTCBBDg&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=5",
@@ -29,6 +31,16 @@ new Vue({
         }
     },
     methods: {
+        punch: function () {
+            this.health -= 10;
+            if (this.health <= 0) {
+                this.ended = true;
+            }
+        },
+        restart: function () {
+            this.health = 100
+            this.ended = false;
+        },
         greeting: function (event) {
             return 'Good' + ' ' + ' ' + event + ' ' + this.name;
         },

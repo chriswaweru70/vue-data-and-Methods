@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vue.js</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    </head>
+
+    <body>
+        <div id="vue-app">
+            <!-- bag image -->
+            <div class="bag" v-bind:class="{burst: ended }">
+
+            </div>
+            <!-- bag health -->
+            <div class="bag-health">
+                <div v-bind:style="{ width: health + '%'}"></div>
+            </div>
+
+            <!-- game controls -->
+            <div class="controls">
+                <button v-show="!ended" v-on:click="punch">Punch</button>
+                <button @click="restart">Restart</button>
+            </div>
+
+
+        </div>
+        <script src="app.js"></script>
+    </body>
+
+</html>
